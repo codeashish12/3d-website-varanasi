@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
@@ -123,6 +124,40 @@ h1, h2, h3, h4, h5, h6, .font-serif {
 
 .float-diya {
   animation: floatDiya 4s ease-in-out infinite;
+=======
+@import "tailwindcss";
+
+@theme {
+  --color-sacred-gold: #D4AF37;
+  --color-sacred-gold-light: #F5E093;
+  --color-saffron: #FF9933;
+  --color-saffron-dark: #E67E22;
+  --color-deep-black: #0B0B0B;
+  --color-luxury-dark: #121212;
+  --color-luxury-gray: #1E1E1E;
+  
+  --font-cinzel: var(--font-cinzel), serif;
+  --font-montserrat: var(--font-montserrat), sans-serif;
+}
+
+:root {
+  --background: #0B0B0B;
+  --foreground: #F5F5F7;
+  --sacred-gold: #D4AF37;
+  --saffron: #FF9933;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-montserrat), sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6, .font-cinzel {
+  font-family: var(--font-cinzel), serif;
+>>>>>>> ec82f9ac2e3c4bf13acc00866314c61be1d44b7f
 }
 
 /* Custom Scrollbar */
@@ -131,6 +166,7 @@ h1, h2, h3, h4, h5, h6, .font-serif {
 }
 
 ::-webkit-scrollbar-track {
+<<<<<<< HEAD
   background: #050505;
 }
 
@@ -185,4 +221,87 @@ h1, h2, h3, h4, h5, h6, .font-serif {
 
 .water-shimmer {
   animation: shimmer 3s infinite ease-in-out;
+=======
+  background: #0B0B0B;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2A2A2A;
+  border-radius: 4px;
+  border: 2px solid #0B0B0B;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
+
+/* Glassmorphism Styles */
+.glass-panel {
+  background: rgba(18, 18, 18, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.glass-card {
+  background: rgba(25, 25, 25, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  background: rgba(25, 25, 25, 0.6);
+  border-color: rgba(212, 175, 55, 0.3);
+  box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.15);
+}
+
+/* Glowing text and borders */
+.gold-glow {
+  text-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+.saffron-glow {
+  text-shadow: 0 0 15px rgba(255, 153, 51, 0.4);
+}
+
+.gold-border-glow {
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.1);
+}
+
+.gold-border-glow:hover {
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.25);
+}
+
+/* Custom animations for waves and particles */
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(2deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.animate-diya-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.05); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+@keyframes slow-pan {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.bg-animate-luxury {
+  background-size: 200% 200%;
+  animation: slow-pan 15s ease infinite;
+>>>>>>> ec82f9ac2e3c4bf13acc00866314c61be1d44b7f
 }
