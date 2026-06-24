@@ -1,0 +1,39 @@
+import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import { ThemeProvider } from "@/context/ThemeContext";
+import "./globals.css";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+export const metadata: Metadata = {
+  title: "THE ETERNAL VARANASI | Where Time Stops And The Soul Awakens",
+  description: "Experience the spiritual capital of India. Explore ancient ghats, majestic temples, aarti rituals, and a luxury travel journey through Varanasi.",
+  keywords: ["Varanasi Tourism", "Kashi Vishwanath", "Ganga Aarti", "Assi Ghat", "Luxury Varanasi Travel", "Brijrama Palace"],
+  authors: [{ name: "The Eternal Varanasi" }],
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+    >
+      <body className="min-h-full flex flex-col">
+        <ThemeProvider>{children}</ThemeProvider>
+      </body>
+    </html>
+  );
+}
+
